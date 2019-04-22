@@ -16,7 +16,7 @@
             <DefaultRolloverStrategy max="10" fileIndex="min" />
         </RollingFile>
         
-        <RollingFile name="daily.log.hist" fileName="/logs/kt_oso_was/log_hist.log"
+        <RollingFile name="daily.log.hist" fileName="/logs/subscription/log_hist.log"
            filePattern="/logs/subscription/loghist/$${date:yyyyMMdd}/log_hist_%d{yyyyMMdd}.log">
             <PatternLayout>
                 <Pattern>%m%n</Pattern>
