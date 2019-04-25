@@ -5,7 +5,7 @@
         <Console name="STDOUT" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} %p %m%n"/>
         </Console>
-
+    
         <RollingFile name="daily.rolling.file" fileName="/logs/subscription/daily.log"
             filePattern="/logs/subscription/log/daily-%d{yyyyMMdd}-%i.log.gz">
             <PatternLayout>
@@ -17,13 +17,8 @@
             </Policies>
             <DefaultRolloverStrategy max="10" fileIndex="min" />
         </RollingFile>
-<<<<<<< HEAD
-
-        <RollingFile name="daily.log.hist" fileName="/logs/kt_oso_was/log_hist.log"
-=======
         
         <RollingFile name="daily.log.hist" fileName="/logs/subscription/log_hist.log"
->>>>>>> 34f52c62eb7c63c3699ce2e88dfaf8e84ddeacf3
            filePattern="/logs/subscription/loghist/$${date:yyyyMMdd}/log_hist_%d{yyyyMMdd}.log">
             <PatternLayout>
                 <Pattern>%m%n</Pattern>
@@ -33,7 +28,7 @@
             </Policies>
         </RollingFile>
     </Appenders>
-
+    
     <Loggers>
         <Logger name="com.jungjoongi" level="debug" additivity="false">
             <AppenderRef ref="STDOUT"/>
@@ -48,7 +43,7 @@
             <AppenderRef ref="STDOUT"/>
             <AppenderRef ref="daily.log.hist" />
         </Logger>
-
+        
        <!--  <Logger name="jdbc.sqlonly" level="error" additivity="false">
             <AppenderRef ref="STDOUT"/>
             <AppenderRef ref="daily.rolling.file"/>
@@ -74,7 +69,7 @@
             <AppenderRef ref="daily.rolling.file"/>
         </Logger> -->
 
-
+    
         <Root level="debug">
         </Root>
     </Loggers>
