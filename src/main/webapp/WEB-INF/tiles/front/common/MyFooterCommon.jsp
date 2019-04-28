@@ -9,7 +9,7 @@
                 <span class="addr">정준기 <span class="info">Seoul.Korea</span></span>
                 <span class="info">https://jungjoongi.com</span>
             </address>
-            <div class="copyright">Copyright© 2018 joongi. All rights reserved.</div>
+            <div class="copyright">Copyright© 2019 joongi. All rights reserved.</div>
         </div>
     </footer>
     <!--// footer end -->

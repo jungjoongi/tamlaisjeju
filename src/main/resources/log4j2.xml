@@ -6,7 +6,7 @@
             <PatternLayout pattern="%d{HH:mm:ss.SSS} %p %m%n"/>
         </Console>
     
-        <RollingFile name="daily.rolling.file" fileName="/logs/subscription/daily.log"
+        <!-- <RollingFile name="daily.rolling.file" fileName="/logs/subscription/daily.log"
             filePattern="/logs/subscription/log/daily-%d{yyyyMMdd}-%i.log.gz">
             <PatternLayout>
                 <Pattern>%d{HH:mm:ss.SSS} %p %m%n</Pattern>
@@ -24,9 +24,9 @@
                 <Pattern>%m%n</Pattern>
             </PatternLayout>
             <Policies>
-                <TimeBasedTriggeringPolicy /><!-- Rotated everyday -->
+                <TimeBasedTriggeringPolicy />Rotated everyday
             </Policies>
-        </RollingFile>
+        </RollingFile> -->
     </Appenders>
     
     <Loggers>
