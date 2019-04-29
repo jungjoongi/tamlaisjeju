@@ -5,8 +5,8 @@ xmlns="http://java.sun.com/xml/ns/javaee"
 xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
 version="3.0">
-  <display-name>subscription</display-name>
-  <description>subscription</description>
+  <display-name>subscription_was</display-name>
+  <description>subscription_was</description>
 
     <listener>
         <listener-class>org.apache.logging.log4j.web.Log4jServletContextListener</listener-class>
@@ -69,7 +69,7 @@ version="3.0">
     
     <context-param>
         <param-name>webAppRootKey</param-name>
-        <param-value>subscription</param-value>
+        <param-value>subscription_was</param-value>
     </context-param>
     
      <jsp-config>
