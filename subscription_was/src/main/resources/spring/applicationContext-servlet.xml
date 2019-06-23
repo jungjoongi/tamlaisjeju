@@ -22,10 +22,15 @@
     <!-- @Aspect 어노테이션이 적용된 클래스를 로딩하여 클래스에 명시된 Advice 및 Pointcut 정보를 이용하여 알맞은 빈 객체에 Advice를 적용. -->
     <aop:aspectj-autoproxy />
     
+    <context:component-scan base-package="com.jungjoongi">
+        <context:exclude-filter type="regex" expression="com.jungjoongi.service.*.*Controller"/>
+    </context:component-scan>
+    
     <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" p:order="1"/>
     <bean id="viewResolver"
         class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:order="2">
-        <property name="prefix" value="/WEB-INF/" />
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/view/" />
         <property name="suffix" value=".jsp" />
     </bean>
     <bean id="stringConverter" class="org.springframework.http.converter.StringHttpMessageConverter">
@@ -49,10 +54,6 @@
             </list>
         </property>
         <property name="preparerFactoryClass" value="org.springframework.web.servlet.view.tiles3.SpringBeanPreparerFactory" />
-    </bean>
-    
-    <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
-        <property name="contentType" value="application/json;charset=UTF-8"/>
     </bean>
     
      <mvc:annotation-driven enable-matrix-variables="true"/>

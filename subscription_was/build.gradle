@@ -102,7 +102,10 @@ dependencies {
     compile group: 'commons-dbcp', name: 'commons-dbcp', version: '1.4'
     
     //mysql
-    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
+    //compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
+    
+    //mariaDB
+    compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.4.1'
     
     //tiles
     compile group: 'org.apache.tiles', name: 'tiles-extras', version: '3.0.8'
