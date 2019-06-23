@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.jungjoongi.service.auth.impl.LoginServiceImpl;
 
 @Controller
+@RequestMapping("/")
 public class MainController {
 	private final static Logger LOGGER = LogManager.getLogger(MainController.class);
 	
@@ -23,16 +24,14 @@ public class MainController {
 		this.loginServiceImpl = loginServiceImpl;
 	}
 	
-	@RequestMapping(value = {"/main.do"}, method= {RequestMethod.GET, RequestMethod.POST})
-	public ModelAndView index(
+	@RequestMapping(value = {""}, method= {RequestMethod.GET, RequestMethod.POST})
+	public String index(
 			HttpServletRequest request,
 			HttpServletResponse response,
 			HttpSession session) {
 		LOGGER.debug("LoginController.view() #START");
 		
-		
-		
-		return new ModelAndView("view/login/login");
+		return "index";
 	}
 	
 }
