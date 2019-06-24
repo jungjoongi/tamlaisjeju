@@ -29,7 +29,7 @@ public class MainController {
 			HttpServletRequest request,
 			HttpServletResponse response,
 			HttpSession session) {
-		LOGGER.debug("LoginController.view() #START");
+		LOGGER.debug("MainController.view() #START");
 		
 		return "index";
 	}

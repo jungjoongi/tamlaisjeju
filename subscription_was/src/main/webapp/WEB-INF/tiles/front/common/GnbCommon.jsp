@@ -1,35 +1,74 @@
 <!-- header start -->
 <header id="header">
-    <section class="section">
-        <h1 class="logo"><a href="/spring-web-project/estimate/view.do" style="border: 1px solid #ffd8d8;padding: 10px;border-radius: 25px;color: #ff6666;">예산노트</a></h1>
-        <h1 class="logo" style="left:150px;"><a href="/spring-web-project/invitation/view.do" style="border: 1px solid #ffd8d8;padding: 10px;border-radius: 25px;color: #ff6666;">명단확인</a></h1>
-        <nav id="nav">
-            <ul class="gnb">
-                <li><a id="login" href="javascript:void(0);"></a></li>
-                <%-- <li><a href="javascript:void(0);">My신청현황 보기</a></li> --%>
-            </ul>
-        </nav>
-    </section>
-</header> 
+	<div class="inner_header">
+	    <h1>
+	        <a href="index.html">탐라는제주</a>
+	    </h1>
+	    <div class="menu_area">
+	        <h2 class="hide">주메뉴영역</h2>
+	        <div class="nav_area topnav clear" id="myTopnav">
+	            <div class="depth_1">
+	                <a href="#">관광지</a>
+	            </div>
+	            <div class="depth_1">
+	                <a href="#">플래너</a>
+	            </div>
+	            <div class="depth_1">
+	                <a href="#">여행기</a>
+	            </div>
+	            <div class="depth_1">
+	                <a href="#">동행</a>
+	            </div>
+	            <div class="depth_1">
+	                <a href="#">제주여행꿀팁</a>
+	            </div>
+	            <div class="depth_1">
+	                    <a href="#">나의 여행</a>
+	            </div>
+	            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	        </div>
+	        <!-- topnav end -->
+	    </div>
+	    <!-- menu_area end-->
+	    <div class="ico_wrap">
+	        <a id="login" class="login" href="#">
+	        </a>
+	        <a class="sitemap" href="#" onclick="openNav()">
+	            <i class="fas fa-bars"></i>
+	            <sapn class="ico_txt">사이트맵</sapn>
+	        </a>
+	        <a class="search" href="#" onclick="openSearch()">
+	            <i class="fas fa-search"></i>
+	            <sapn class="ico_txt">검색</sapn>
+	        </a>
+	
+	    </div>
+	    <!-- ico_wrap end-->
+	
+	    <div id="myNav" class="nav_overlay">
+	        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	        <div class="nav_overlay-content">
+	            <a href="#">About</a>
+	            <a href="#">Services</a>
+	            <a href="#">Clients</a>
+	            <a href="#">Contact</a>
+	        </div>
+	    </div>
+	
+	
+	
+	
+	    <div id="myOverlay" class="srh_overlay">
+	        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+	        <div class="srh_overlay-content">
+	            <form action="/action_page.php">
+	                <input type="text" placeholder="Search.." name="search">
+	                <button type="submit">
+	                    <i class="fa fa-search"></i>
+	                </button>
+	            </form>
+	        </div>
+	    </div>
+	</div>
+</header>
 <!--// header end -->
-
-<script>
-$.ajax({ 
-	url:"/login/isLogin.json",
-	type:"post",
-	success : function(data) {
-		var rt = data.rt
-		var msg = data.rtMsg
-		var link = data.link
-		var html = data.html
-		if(rt == "0000") {
-			$("#login").html(html)
-			$("#login").attr("href", link)
-		}
-		if (rt == "0001"){
-			$("#login").html(html)
-			$("#login").attr("href", link)
-		}
-	}
-})
-</script>

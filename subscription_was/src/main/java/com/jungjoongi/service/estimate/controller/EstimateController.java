@@ -24,11 +24,13 @@ public class EstimateController {
 	}
 	
 	@RequestMapping(value = {"view"}, method= {RequestMethod.GET, RequestMethod.POST})
-	public void EstimateView(
+	public String EstimateView(
 			HttpServletRequest request,
 			HttpServletResponse response,
 			HttpSession session) {
 		LOGGER.debug("CustConsultController.list() #START");
+		
+		return "estimate/view";
 		
 		
 	}

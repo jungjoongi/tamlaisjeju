@@ -1,6 +1,6 @@
 <tiles:insertDefinition name="FrontLayout">
 	<tiles:putAttribute name="scriptPage">
-		<script src="/spring-web-project/estimate/view.js?ver=1"></script>
+		<script src="/resources/estimate/view.js?ver=1"></script>
 
 
 

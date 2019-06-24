@@ -10,13 +10,11 @@
 </head>
 
 <body>
-    <div id="wrap">
-        <tiles:insertAttribute name="gnbCommon" />
-    
-	    <tiles:insertAttribute name="contentAttr" />
+    <tiles:insertAttribute name="gnbCommon" />
+   
+    <tiles:insertAttribute name="contentAttr" />
 
-	    <tiles:insertAttribute name="footerCommon" />
-    </div>
+    <tiles:insertAttribute name="footerCommon" />
 </body>
 </html>
 
