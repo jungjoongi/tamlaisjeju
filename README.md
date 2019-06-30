@@ -1,12 +1,16 @@
-# subscription_project
+# tamlaisjeju_project
 
 ### directory
-##### ㄴsubscription_was
-##### ㄴsubscription_web
-
+#### ㄴtamlaisjeju_was
+#### ㄴtamlaisjeju_web
+#### ㄴ_backup (이전버전)
 #### since 2019.06.23
 
-## RESTFul Spring Project
+## RESTFul Spring Projec
+
+* Spring boot
+* Thymeleaf
+* MariaDB
 
 
 @2019 Copyright : https://jungjoongi.com

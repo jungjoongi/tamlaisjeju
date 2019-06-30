@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jungjoongi.service.estimate.dao.EstimateDao">
+	<insert id="insert" parameterType="com.jungjoongi.service.estimate.dto.EstimateReqDto">
+    	INSERT INTO tbl_estimate(dates, list, budget, remark, isYn, types, payTypes)
+		VALUES(#{dates}, #{list}, #{budget}, #{remark}, #{isYn}, #{types}, #{payTypes});
+    </insert>
+    
+    <select id="list" resultType="com.jungjoongi.service.estimate.dto.EstimateDto">
+	    SELECT *
+		FROM tbl_estimate;
+    </select>
+    
+    <select id="listPay" resultType="com.jungjoongi.service.estimate.dto.EstimatePayDto">
+		SELECT truncate(sum(total.budget),0) as total
+			,truncate(sum((
+				select c.budget 
+				from tbl_estimate c 
+				where c.`no` = total.`no` 
+				and c.isYn = "지출완료")),0) as completed  
+			,truncate(sum((
+				select c.budget 
+				from tbl_estimate c 
+				where c.`no` = total.`no` 
+				and c.isYn = "미지출")),0) as required  
+		FROM tbl_estimate total
+    </select>
+    
+    
+</mapper>
