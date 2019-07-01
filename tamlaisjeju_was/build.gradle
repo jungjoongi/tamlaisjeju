@@ -33,3 +33,23 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '1.5.7'
 }
+
+bootJar {
+	archiveBaseName = 'tamlaisjeju'
+	archiveFileName = 'tamlaisjeju_was.jar'
+	archiveVersion = '0.0.1'
+}
+
+sourceSets{
+
+        main{
+
+            resources {
+
+                exclude "**/static/**"
+
+            }
+
+        }
+
+    }
