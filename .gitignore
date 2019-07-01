@@ -1,17 +1,38 @@
+HELP.md
+.gradle
+build/
 *.project
 *.classpath
 *.class
 *.log
-**/.gradle/
-**/.settings/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+**/application.properties
 **/bin
-**/build
-**/temp/
-**/.vscode
-*.DS_Store
-**/node_modules
-**/package-lock.json
-**/aws.properties
-**/properties.xml   
-!build.gradle
-/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
