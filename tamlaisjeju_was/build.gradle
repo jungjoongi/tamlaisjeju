@@ -30,4 +30,5 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '1.5.7'
+	implementation('nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect')
 }

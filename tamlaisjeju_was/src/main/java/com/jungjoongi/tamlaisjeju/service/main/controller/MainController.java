@@ -27,8 +27,5 @@ public class MainController {
 		return "index";
 	}
 
-	public String a() {
-		return "a";
-	}
 }
 	
